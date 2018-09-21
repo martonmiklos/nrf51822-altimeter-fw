@@ -1,0 +1,6 @@
+[submodule "SparkFun_MMA8452Q_Arduino_Library"]
+	path = SparkFun_MMA8452Q_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library
+[submodule "DPS310-Pressure-Sensor"]
+	path = DPS310-Pressure-Sensor
+	url = https://github.com/Infineon/DPS310-Pressure-Sensor.git

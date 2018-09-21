@@ -223,3 +223,6 @@ config
 ../../../components/drivers_nrf/power
 ../../../components/drivers_nrf/wdt
 .
+DPS310-Pressure-Sensor/src
+SparkFun_MMA8452Q_Arduino_Library/src
+../../../components/drivers_ext/dps310
