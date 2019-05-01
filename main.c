@@ -158,8 +158,6 @@ nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(0);
 
 static void advertising_start(void);
 static void adc_event_handler(nrf_drv_adc_evt_t const * p_event);
-
-
 /**@brief Callback function for asserts in the SoftDevice.
  *
  * @details This function will be called in case of an assert in the SoftDevice.
@@ -396,14 +394,13 @@ static void timers_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
-
 static void barometer_init(void)
 {
     ret_code_t err_code;
 
     const nrf_drv_twi_config_t twi_elan_tp_config = {
-       .scl                = 21,
-       .sda                = 22,
+       .scl                = 10,
+       .sda                = 13,
        .frequency          = NRF_TWI_FREQ_100K,
        .interrupt_priority = APP_IRQ_PRIORITY_HIGH,
        .clear_bus_init     = false
@@ -414,7 +411,7 @@ static void barometer_init(void)
 
     nrf_drv_twi_enable(&m_twi);
 
-    dps310_init(&m_twi, DPS310__STD_SLAVE_ADDRESS);
+    dps310_init(&m_twi, DPS310__ALT_SLAVE_ADDRESS);
 }
 
 
